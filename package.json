@@ -1,0 +1,12 @@
+{
+  "name": "ignite-react-chapter01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Marcelo-Marcal/ignite-react-chapter01.git",
+  "author": "Marcelo Marçal <marcelo.a.marcal@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
