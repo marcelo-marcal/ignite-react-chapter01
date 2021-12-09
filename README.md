@@ -48,18 +48,26 @@ Vamos instalar a Babel, como dependencia de desenvolvimento:
 Despois de instalado vamos criar um arquivo na raiz do projeto:
   babel.config.js
 
-img001
+<h1 align="center">
+    <img src="./img/img001.png" />
+</h1>
+
 
 Agora na pasta src, vamos criar um aquivo:
   index.js
 
 E escrever o seguinte código:
-img002
+
+<h1 align="center">
+    <img src="./img/img002.png" />
+</h1>
 
 E vamos execulta
 ```yarn babel src/index.js --out-file dist/bundle.js```
 
-img003
+<h1 align="center">
+    <img src="./img/img003.png" />
+</h1>
 
 O mesmo codigo gerado dentro do site do Babel.
 
@@ -69,9 +77,12 @@ Vamos instalar a biblioteca @babel/preset-react -D como dependencia de desenvolv
 
 E dentro do babal.config.js adicionar uma nova linha.
 
-img004
+<h1 align="center">
+    <img src="./img/img004.png" />
+</h1>
 
-E vamos execulta
+E vamos execulta.
+
 ```yarn babel src/index.js --out-file dist/bundle.js```
 
 
