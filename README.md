@@ -4,6 +4,7 @@
 
 ## Fundamentos do ReactJS
 
+### 1 Criando estrutura do projeto
 
 1.1 Vamos criar o arquivo package.json
 
@@ -33,6 +34,50 @@ Dentro do public:
 
   E entramos digitando e selecionado html5, pois ele ja ira criar uma estrutura inicial.
 
-  
+
+### 2 Configurando Babel
+
+Vamos configura o Babel, que tem a função de converter o codigo para que todos os Browser possa entender nossos códigos.
+
+site: https://babeljs.io/
+
+Vamos instalar a Babel, como dependencia de desenvolvimento:
+
+```yarn add @babel/core @babel/cli @babel/preset-env -D```
+
+Despois de instalado vamos criar um arquivo na raiz do projeto:
+  babel.config.js
+
+img001
+
+Agora na pasta src, vamos criar um aquivo:
+  index.js
+
+E escrever o seguinte código:
+img002
+
+E vamos execulta
+```yarn babel src/index.js --out-file dist/bundle.js```
+
+img003
+
+O mesmo codigo gerado dentro do site do Babel.
+
+Vamos instalar a biblioteca @babel/preset-react -D como dependencia de desenvolvimento:
+
+```yarn add @babel/preset-react -D```
+
+E dentro do babal.config.js adicionar uma nova linha.
+
+img004
+
+E vamos execulta
+```yarn babel src/index.js --out-file dist/bundle.js```
+
+
+vamos trasformar a extenção do nosso arquivo index.js em index.jsx
+E porque jsx? Porque e quando ultilizamos HTML dentro do JavaScript
+
+```yarn babel src/index.jsx --out-file dist/bundle.js```
 
 
