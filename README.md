@@ -91,4 +91,51 @@ E porque jsx? Porque e quando ultilizamos HTML dentro do JavaScript
 
 ```yarn babel src/index.jsx --out-file dist/bundle.js```
 
+### Configurando Webpack
+
+Vai ensina atraves de uma serie de configurações que se chama loaders em nossa aplicação como ela deve tratar cada tipo de arquivo seja .js, .sass, .png, 
+Ai o webpack vai tranforma os aquivos em uma forma que sera entendido pelo Browser.
+
+Vamos instalar Webpack
+
+```yarn add webpack webpack-cli webpack-dev-server -D```
+
+Vamos criar na raiz do projeto um aruivo de configuração webpack.config.js
+Vamos usar o `require` pois o node consegue intender ele desta forma ele vai colocar o caminha conforme o sistema operacional.
+
+<h1 align="center">
+    <img src="./img/img005.png" />
+</h1>
+
+E vou configura o caminho e que tipo de aquivo ele ira ler em uma expressão regular:
+
+<h1 align="center">
+    <img src="./img/img006.png" />
+</h1>
+
+Vamos instalar babel-loader como dependencia
+
+```yarn add babel-loader -D```
+
+Que ira fazer a integração entre o `loader` e `webpack`
+
+Agora apenas para testar o codigo se já esta funcionado, vamos criar dentro src/ um arquivo App.jsx
+
+<h1 align="center">
+    <img src="./img/img007.png" />
+</h1>
+
+E no arquivo index.jsx, vamos fazer as senguintes importações:
+
+<h1 align="center">
+    <img src="./img/img008.png" />
+</h1>
+
+E vamos execulta o webpack no terminal:
+
+```yarn webpack```
+
+E se acessa a pasta dist ele geral em nosso `bundle.js` o nosso novo aquivo.
+
+
 
