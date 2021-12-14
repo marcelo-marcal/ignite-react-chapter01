@@ -138,4 +138,48 @@ E vamos execulta o webpack no terminal:
 E se acessa a pasta dist ele geral em nosso `bundle.js` o nosso novo aquivo.
 
 
+### Estrutura do ReactJS
 
+O React tem a finalidade de criar toda a interfeice da aplicação atraves do javascript.
+
+E vamos colocar dentro do arquivo index.html o seguinte codigo dentro do `body` ai toda a aplicação react sera contruida dentro da div.
+```
+<body>
+  <div id="root"></div>  
+</body>
+```
+
+E dentro do arquivo index.jsx mais fazer a seguinte alteração, para teste:
+Onde o `getElementById` vai procura dentro da aplicação pelo id, que nesse caso e root.
+
+<h1 align="center">
+    <img src="./img/img009.png" />
+</h1>
+
+E vamos execulta o comando:
+```yarn webpack```
+
+E dentro do arquivo `index.html` adicionar o script:
+
+<h1 align="center">
+    <img src="./img/img010.png" />
+</h1>
+
+E vamos abri o arquivo html
+
+Mas pra não precisa import o React dentro `index.jsx`,vamos fazer uma alteração no arquivo `babel.config` e adicionar o seguinte codigo: `runtime: 'automatic'`
+
+<h1 align="center">
+    <img src="./img/img011.png" />
+</h1>
+
+E vamos execulta o comando:
+```yarn webpack```
+
+E posso tambem busca as informações dentro do `App.jsx`
+
+<h1 align="center">
+    <img src="./img/img012.png" />
+</h1>
+
+Assim conseguimos intender como ele funciona.
