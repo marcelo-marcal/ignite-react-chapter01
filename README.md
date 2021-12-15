@@ -218,3 +218,32 @@ E vamos execulta o comando:
 Ele ira gera um arquivo html dentro da pasta `dist`
 Assim melhoramos o fluxo da aplicação.
 
+### Webpack Dev Server
+
+Vamos instalar webpack-dev-server como dependencia
+
+```yarn add webpack-dev-server -D```
+
+E vamos configura dentro do arquivo `webpack.config` uma variavel `devServer` para ele ficar escultado cada alteração na aplicação:
+
+<h1 align="center">
+    <img src="./img/img015.png" />
+</h1>
+
+E vamos execulta o comando:
+```yarn webpack serve```
+
+Dica: Caso não fucione sera nescessario mudar a versão da instalação do `yarn add webpack-dev-server -D` = `"webpack-dev-server": "^4.11.1"` para: `"webpack-dev-server": "3.11.2"`.
+
+E vamos execulta o comando:
+```yarn add webpack-dev-server@3.11.1```
+
+E vamos execulta o comando:
+```yarn webpack serve```
+
+<h1 align="center">
+    <img src="./img/img016.png" />
+</h1>
+
+Agora todas as vezes que for salvo uma alteração no codigo ele vai gera um `bundle`
+
