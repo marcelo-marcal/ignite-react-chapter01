@@ -1,3 +1,7 @@
+<h1 align="center">
+    <img src="./img/img000.png" />
+</h1>
+
 # ignite-react-chapter01
 
 ### Trilha ReactJS
@@ -249,7 +253,7 @@ Agora todas as vezes que for salvo uma alteração no codigo ele vai gera um `bu
 
 ### Utilizando source maps
 ## Importante:
-Configura uma funcionalidade chamada source maps, que e uma forma de visualizar o codigo original da nossa aplicação mesmo quando ele esta no `bundle.js`. Que ira ajudar quando for encontra o erro.
+Configura uma funcionalidade chamada source maps, que e uma forma de visualizar o codigo original da nossa aplicação mesmo quando ele está no `bundle.js`. Que ira ajudar quando for encontra o erro.
 
 Vamos no arquivo `webpack.config.js`, e acrecentar a seguinte linha no codigo:
 ```
@@ -260,7 +264,48 @@ devtool: 'eval-source-map',
     <img src="./img/img017.png" />
 </h1>
 
-Pauso o webpack
+Pauso o webpack `Ctrl + C`
 
 E vamos execulta o comando:
 ```yarn webpack serve```
+
+### Ambiente dev e produção
+
+Vamos configura um ambiante de desenvolmineto e um de produção.
+E dentro do aquivo `webpack.config.js`, e acrecentar a seguinte linha no codigo:
+
+```const isDevelopment = process.env.NODE_ENV !== 'development';```
+
+```mode: isDevelopment ? 'development' : 'production',```
+
+```devtool: isDevelopment ? 'eval-source-map': 'source-map',```
+
+<h1 align="center">
+    <img src="./img/img018.png" />
+</h1>
+
+Para execulta a aplicação:
+Mac e Linux
+```NODE_ENV=production yarn webpack```
+
+No windows
+Vamos precisa instalar uma variavel de ambiente e funciona para definir variavel de ambiente independe do sistema:
+```yarn add cross-env -D```
+
+E dentro do arquivo `package.json` adicionar encima das dependencias alguns scripts:
+Um script para ambiente de desenvolmineto:
+```"dev": "webpack serve",```
+Um script para ambiente de produção:
+```"build": "cross-env NODE_ENV=production webpack"```
+
+<h1 align="center">
+    <img src="./img/img019.png" />
+</h1>
+
+Salva
+
+E vamos execulta o comando para ambiente de desenvolmineto:
+```yarn dev```
+
+E vamos execulta o comando para ambiente de produção:
+```yarn build```
