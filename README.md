@@ -57,8 +57,7 @@ Despois de instalado vamos criar um arquivo na raiz do projeto:
 </h1>
 
 
-Agora na pasta src, vamos criar um aquivo:
-  index.js
+Agora na pasta src, vamos criar um aquivo: `index.js`
 
 E escrever o seguinte código:
 
@@ -66,7 +65,8 @@ E escrever o seguinte código:
     <img src="./img/img002.png" />
 </h1>
 
-E vamos execulta
+E vamos execulta:
+
 ```yarn babel src/index.js --out-file dist/bundle.js```
 
 <h1 align="center">
@@ -147,6 +147,7 @@ E se acessa a pasta dist ele geral em nosso `bundle.js` o nosso novo aquivo.
 O React tem a finalidade de criar toda a interfeice da aplicação atraves do javascript.
 
 E vamos colocar dentro do arquivo index.html o seguinte codigo dentro do `body` ai toda a aplicação react sera contruida dentro da div.
+
 ```
 <body>
   <div id="root"></div>  
@@ -161,6 +162,7 @@ Onde o `getElementById` vai procura dentro da aplicação pelo id, que nesse cas
 </h1>
 
 E vamos execulta o comando:
+
 ```yarn webpack```
 
 E dentro do arquivo `index.html` adicionar o script:
@@ -178,6 +180,7 @@ Mas pra não precisa import o React dentro `index.jsx`,vamos fazer uma alteraç�
 </h1>
 
 E vamos execulta o comando:
+
 ```yarn webpack```
 
 E posso tambem busca as informações dentro do `App.jsx`
@@ -198,12 +201,16 @@ Vamos removela do codigo.
 </h1>
 
 E instalar:
+
 ```yarn add html-webpack-plugin -D```
 
 E dentro do arquivo `webpack.config.js`, mais importa ele.
 Vamos adicionar o seguinte codigo: 
+
 ```const HtmlWebpackPlugin = require('html-webpack-plugin')```
+
 E tambem:
+
 ```
 plugins: [
     new HtmlWebpackPlugin({
@@ -217,6 +224,7 @@ plugins: [
 </h1>
 
 E vamos execulta o comando:
+
 ```yarn webpack```
 
 Ele ira gera um arquivo html dentro da pasta `dist`
@@ -235,14 +243,17 @@ E vamos configura dentro do arquivo `webpack.config` uma variavel `devServer` pa
 </h1>
 
 E vamos execulta o comando:
+
 ```yarn webpack serve```
 
 Dica: Caso não fucione sera nescessario mudar a versão da instalação do `yarn add webpack-dev-server -D` = `"webpack-dev-server": "^4.11.1"` para: `"webpack-dev-server": "3.11.2"`.
 
 E vamos execulta o comando:
+
 ```yarn add webpack-dev-server@3.11.1```
 
 E vamos execulta o comando:
+
 ```yarn webpack serve```
 
 <h1 align="center">
@@ -256,6 +267,7 @@ Agora todas as vezes que for salvo uma alteração no codigo ele vai gera um `bu
 Configura uma funcionalidade chamada source maps, que e uma forma de visualizar o codigo original da nossa aplicação mesmo quando ele está no `bundle.js`. Que ira ajudar quando for encontra o erro.
 
 Vamos no arquivo `webpack.config.js`, e acrecentar a seguinte linha no codigo:
+
 ```
 devtool: 'eval-source-map',
 ```
@@ -267,6 +279,7 @@ devtool: 'eval-source-map',
 Pauso o webpack `Ctrl + C`
 
 E vamos execulta o comando:
+
 ```yarn webpack serve```
 
 ### Ambiente dev e produção
@@ -286,16 +299,21 @@ E dentro do aquivo `webpack.config.js`, e acrecentar a seguinte linha no codigo:
 
 Para execulta a aplicação:
 Mac e Linux
+
 ```NODE_ENV=production yarn webpack```
 
 No windows
 Vamos precisa instalar uma variavel de ambiente e funciona para definir variavel de ambiente independe do sistema:
+
 ```yarn add cross-env -D```
 
 E dentro do arquivo `package.json` adicionar encima das dependencias alguns scripts:
 Um script para ambiente de desenvolmineto:
+
 ```"dev": "webpack serve",```
+
 Um script para ambiente de produção:
+
 ```"build": "cross-env NODE_ENV=production webpack"```
 
 <h1 align="center">
@@ -305,7 +323,37 @@ Um script para ambiente de produção:
 Salva
 
 E vamos execulta o comando para ambiente de desenvolmineto:
+
 ```yarn dev```
 
 E vamos execulta o comando para ambiente de produção:
+
 ```yarn build```
+
+### Importando arquivos CSS
+
+Vamos criar uma pasta `styles` e dentro dela um arquivo `global.css`.
+
+<h1 align="center">
+    <img src="./img/img020.png" />
+</h1>
+
+E dentro do App vamos importa o arquivo:
+
+`import './styles/global.css'`
+
+E dentro do arquivo `webpack.config.js` vamos criar uma nova regra para que ele possa ler arquivos css.
+
+<h1 align="center">
+    <img src="./img/img021.png" />
+</h1>
+
+E estalar dois loaders:
+Vamos instalar o `style-loader` e `css-loader` como dependencia
+
+```yarn add style-loader css-loader -D```
+
+E vamos execulta o comando:
+
+```yarn dev```
+
