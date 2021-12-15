@@ -357,3 +357,33 @@ E vamos execulta o comando:
 
 ```yarn dev```
 
+### Utilizando SASS
+
+Que vem ser um pre processador, que nos da algumas funcionalidades a mais no projeto.
+
+Vamos instalar o `sass-loader` como dependencia.
+Para entender arquivos sass
+
+```yarn add sass-loader -D```
+
+```yarn add node-sass -D```
+
+Se precisa desistalar:
+
+```yarn remove sass```
+
+E dentro do arquivo `webpack.config.js` vamos alter a nova regra para que ele possa ler arquivos.
+
+<h1 align="center">
+    <img src="./img/img022.png" />
+</h1>
+
+Troco arquivo `global.css` para `global.scss`.
+
+E no arquivo `App.jsx`
+Troco arquivo `import './styles/global.css';` para `import './styles/global.scss';`.
+
+E vamos execulta o comando:
+
+```yarn dev```
+
