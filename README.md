@@ -247,3 +247,20 @@ E vamos execulta o comando:
 
 Agora todas as vezes que for salvo uma alteração no codigo ele vai gera um `bundle`
 
+### Utilizando source maps
+## Importante:
+Configura uma funcionalidade chamada source maps, que e uma forma de visualizar o codigo original da nossa aplicação mesmo quando ele esta no `bundle.js`. Que ira ajudar quando for encontra o erro.
+
+Vamos no arquivo `webpack.config.js`, e acrecentar a seguinte linha no codigo:
+```
+devtool: 'eval-source-map',
+```
+
+<h1 align="center">
+    <img src="./img/img017.png" />
+</h1>
+
+Pauso o webpack
+
+E vamos execulta o comando:
+```yarn webpack serve```
