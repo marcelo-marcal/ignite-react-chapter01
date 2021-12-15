@@ -183,3 +183,38 @@ E posso tambem busca as informações dentro do `App.jsx`
 </h1>
 
 Assim conseguimos intender como ele funciona.
+
+### Servindo HTML estático
+
+Uma melhoria que podemos fazer em nosso codigo html para não fica com a tag ` <script src="../dist/bundle.js"></script>`:
+Vamos removela do codigo.
+
+<h1 align="center">
+    <img src="./img/img013.png" />
+</h1>
+
+E instalar:
+```yarn add html-webpack-plugin -D```
+
+E dentro do arquivo `webpack.config.js`, mais importa ele.
+Vamos adicionar o seguinte codigo: 
+```const HtmlWebpackPlugin = require('html-webpack-plugin')```
+E tambem:
+```
+plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html')
+    })
+  ],
+```
+
+<h1 align="center">
+    <img src="./img/img014.png" />
+</h1>
+
+E vamos execulta o comando:
+```yarn webpack```
+
+Ele ira gera um arquivo html dentro da pasta `dist`
+Assim melhoramos o fluxo da aplicação.
+
