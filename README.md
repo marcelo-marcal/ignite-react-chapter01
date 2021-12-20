@@ -413,3 +413,52 @@ E fazer uma pena alteração no stilo dentro do arquivo `global.scss`.
 <h1 align="center">
     <img src="./img/img025.png" />
 </h1>
+
+E vamos execulta o comando:
+
+```yarn dev```
+
+### Propriedades no React
+
+Os tres conseitos basico do react: Componete, Propiedade e Estado
+
+Vai criar um arquivo `RepositoryList.jsx` com essa estrutura:
+
+<h1 align="center">
+    <img src="./img/img026.png" />
+</h1>
+
+E para acessa o componete eu vou usa um argumento `props` e chamar a propriedade que tem o nome `repository` eu acesso o `props` com o nome `{props.repository}` onde as chaves representa uma variavel javascript dentro do html.
+
+E dentro do arquivo `RepositoryItem.jsx`  
+<h1 align="center">
+    <img src="./img/img027.png" />
+</h1>
+
+Sendo possivel fazer uma verificação dentro do repositorio.
+Caso o repositorio esteja vazio `??` ele me retorna um nome: tipo Default
+<h1 align="center">
+    <img src="./img/img028.png" />
+</h1>
+
+`??` = e parecedo com o sinal `||` que e ou, mais essa nova funcionalidade Desconsidera que o zero e um valor invalido.
+
+Seguindo pode estrutura a lista com as informações para o `RepositoryItem` no `RepositoryList` da seguinte forma.
+<h1 align="center">
+    <img src="./img/img029.png" />
+</h1>
+
+E dentro do arquivo `RepositoryItem.jsx` e para poder acessa o nome do reposito eu vou adiciona `?.nome` onde o `?` vai verifica com o repositorio está nulo ou não, e estive nulo ele não ira procura e retorna logo o Default.
+<h1 align="center">
+    <img src="./img/img030.png" />
+</h1>
+
+Outra forma de resolver e colocar o `repository={repository}` em todos eles.
+<h1 align="center">
+    <img src="./img/img031.png" />
+</h1>
+
+E dentro do arquivo `RepositoryItem.jsx` vamos uses as outras informações:
+<h1 align="center">
+    <img src="./img/img032.png" />
+</h1>
