@@ -10,6 +10,8 @@
 
 ### 1 Criando estrutura do projeto
 
+## 1 Configurando Ambiente:
+
 1.1 Vamos criar o arquivo package.json
 
 ```yarn init -y``` 
@@ -387,3 +389,27 @@ E vamos execulta o comando:
 
 ```yarn dev```
 
+Fim da Configuração de Ambiente:
+
+## 2 Conceitos Importantes:
+
+### Primeiro componente React
+
+Criar pasta components dentro src:
+
+E dentro da pastqa um arquivo `RepositoryList.jsx`
+
+E vamos contruir nosso componente.
+<h1 align="center">
+    <img src="./img/img023.png" />
+</h1>
+
+E vamos altera o arquivo `App.jsx`
+<h1 align="center">
+    <img src="./img/img024.png" />
+</h1>
+
+E fazer uma pena alteração no stilo dentro do arquivo `global.scss`.
+<h1 align="center">
+    <img src="./img/img025.png" />
+</h1>
