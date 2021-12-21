@@ -485,3 +485,27 @@ E no `App.jsx` vamos rederizar com as alterações:
 Conceito:
 E que uma variavel nunca podera ter seu valor alterado, mais sim sempre ira receber um novo valor.
 
+### Fast Refresh no Webpack
+
+E uma forma de altera o codigo da aplicação e salvar, porem mantendo o estado do componete no Browse.
+
+Vamos instalar React Refresh Webpack Plugin como dependencia
+
+```yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh```
+
+E vamos no no arquivo `webpack.config.js`
+
+E vamos importa `const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')`
+
+E chamar ele somente em ambiente de desenvolvimento
+<h1 align="center">
+    <img src="./img/img035.png" />
+</h1>
+
+`&&` Se eu estive em desenvolvimento ele ira execulta a segunda parte do if, e se não, ele ira retorna falso.
+E para não gera error vamos usar `.filter(Boolean),` para tudo for falso ele remover o falso de dentro do if.
+
+Vamos para `yarn dev` com `Ctrl + C`
+
+E vamos rodar `yarn dev`
+
