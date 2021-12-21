@@ -472,10 +472,16 @@ Criar um arquivo `Counter.jsx` dentro da pasta components.
     <img src="./img/img033.png" />
 </h1>
 
-`useState` Vai munitora e vai trazer atraves de um arrey
+`useState` Vai monitora e vai trazer atraves de um arrey
 
 E no `App.jsx` vamos rederizar com as alterações:
 
 <h1 align="center">
     <img src="./img/img034.png" />
 </h1>
+
+### A imutabilidade no React
+
+Conceito:
+E que uma variavel nunca podera ter seu valor alterado, mais sim sempre ira receber um novo valor.
+
