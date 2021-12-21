@@ -462,3 +462,20 @@ E dentro do arquivo `RepositoryItem.jsx` vamos uses as outras informações:
 <h1 align="center">
     <img src="./img/img032.png" />
 </h1>
+
+### Estado do componente
+
+Criar um componete para explicação:
+Criar um arquivo `Counter.jsx` dentro da pasta components.
+
+<h1 align="center">
+    <img src="./img/img033.png" />
+</h1>
+
+`useState` Vai munitora e vai trazer atraves de um arrey
+
+E no `App.jsx` vamos rederizar com as alterações:
+
+<h1 align="center">
+    <img src="./img/img034.png" />
+</h1>
