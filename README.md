@@ -526,3 +526,76 @@ E no arquivo `repositories.scss` vamos fazer alguns estilos.
 <h1 align="center">
     <img src="./img/img036.png" />
 </h1>
+
+```
+li {
+    & + li {
+       margin-top: 20px;
+    }
+```
+`& + li { }` = Toda vez que tive uma `li` devera fazer alguma coisa.
+
+
+### Utilizando o useEffect
+
+Vamos pucha o repositorio de dentro da API do github:
+
+`api.github.com/users/Diego3g`
+
+<h1 align="center">
+    <img src="./img/img037.png" />
+</h1>
+
+mais vamos usa uma lista de repositorio da rocketseat
+
+`api.github.com/orgs/rocketseat/repos`
+
+E depois de copia a url de deixa comentada dentro do arquivo `RepositoryList.jsx`
+
+E vamos criar um estado `const [] = useState([]);`para armazena a listagem de repositorios. E vamos adicionar as seguintes variaves: `repositories , setRepositories`.
+
+ Vamos usar o `useEffect()` que tem a finalidade de esta escultado alguma alteração.
+ E vai receber dois parametros:
+ 1 - Qual função eu quero execultar. `{},`
+ 2 - Quando eu quero execultar a função. `[]` como dependecias, ou seja quais as informações que quando mudarem o `useEffect()` vai execulta de novo.
+
+ Ex: Toda vez que o repositories for atualizado ele ira execulta o useEffect().
+
+ ```
+  useEffect(() => {
+
+  }, [repositories]);
+ ```
+
+Mais se passa o arrey dessa dependencia vazio ele vai execulta uma unica vez, assim que componete for exibido em tela.
+OBS: Cuidado para não deixa sem o segundo parametro, pois ele ira entra loop!
+
+No primeiro paramentro vamos fazer um `fetch()` e vamos busca os nosso repositorio no github.
+E quando esse `fetch()` me devolver um resposta `.then()`.
+Eu vou converte essa resposta para `json`. 
+Assim: `.then(response => response.json())`.
+
+E quando a resposta pra `json` termina de ser convertida, eu vou ter os dados do meu repositorio.
+Assim: `.then(data => response.json())`.
+
+Vamos um exemplo:
+
+<h1 align="center">
+    <img src="./img/img038.png" />
+</h1>
+O console.log() e so para podemos ver oque esta trazendo.
+
+No Browse, vamos dar um inspecionar > Console e vou lipar o console e dar um F5.
+
+<h1 align="center">
+    <img src="./img/img039.png" />
+</h1>
+
+Agora vamos salva o `data` dentro da variavel de repositorio:
+Onde eu vou dar `setRepositories(data)` passando o data.
+Ficando assim: `.then(data => setRepositories(data))`
+
+### Listando repositórios
+
+Agora so precisamos pegar o `repositories` e mostrar em tela.
+
