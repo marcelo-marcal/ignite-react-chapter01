@@ -518,7 +518,8 @@ No arquivo `App.jsx` vamos remover a parte do counter e deixa so o `<RepositoryL
 
 E na pasta `styles` vamos criar um arquivo `repositories.scss` que vai ser a estilização dos repositorios.
 
-Em no arquivo `RepositoryList.jsx` vamos importa `import '../styles/repositories.scss';`
+Em no arquivo `RepositoryList.jsx`. 
+E vamos importa `import '../styles/repositories.scss';`
 
 E no arquivo `repositories.scss` vamos fazer alguns estilos.
 
