@@ -595,7 +595,60 @@ Agora vamos salva o `data` dentro da variavel de repositorio:
 Onde eu vou dar `setRepositories(data)` passando o data.
 Ficando assim: `.then(data => setRepositories(data))`
 
+
 ### Listando repositórios
 
-Agora so precisamos pegar o `repositories` e mostrar em tela.
+Agora so precisamos pegar o `repositories` e mostrar em tela de forma dinamica.
+Vamos começa deletando a variavel:
+
+```
+const repository = {
+  nome: 'unform',
+  description: 'Forms in React',
+  link: 'https://github.com/unform/unform'
+}
+```
+E para mostra no vetor em cada um coisa diferente.
+Dentro do HTML:
+Eu vou percorre cada um repositorio, e para cada um dos repositorio eu quero retorna alguma coisa.
+`forEach` = Ele percorre cada um dos repositorios execulte uma fulção.
+`map` = Ele percorre cada um dos repositorios e retorna alguma coisa.
+
+Para cada repositorio eu quero retornar um repositorio item
+
+```
+{repositories.map(repository => {
+    return <RepositoryItem repository={repository}/>
+})}
+```
+
+Ou eu posso colocar parentes e omitir o return
+
+```
+{repositories.map(repository => (
+    <RepositoryItem repository={repository}/>
+))}
+```
+E quando o retorno tem uma linha só ou um retorno pequeno:
+
+```
+{repositories.map(repository => <RepositoryItem repository={repository}/>)}
+```
+
+Mais vamos usar a seguinte:
+
+<h1 align="center">
+    <img src="./img/img040.png" />
+</h1>
+
+E la no `RepositoryItem.jsx` vamos trocar de `link` para `html_url` 
+E podemos ate remover o `?? 'Default'`.
+
+E todas as vez que eu fizer um `map` em minha aplicação, eu priciso informa ao React atraves de uma propriedade, que o proprio React cria, chamada `key={}` qual e a informação unica entre cada repositorio. Por exempro eu não posso ter um repositorio com o nome repetido, então se eu usar o nome do repositorio como chave: `key={repository.name}`. Ele deixa de aprensentar o error no developer tools.
+
+```
+{repositories.map(repository => {
+    return <RepositoryItem key={repository.name} repository={repository}/>
+})}
+```
 
