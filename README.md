@@ -652,3 +652,47 @@ E todas as vez que eu fizer um `map` em minha aplicação, eu priciso informa ao
 })}
 ```
 
+## 4 Usando TypeScript:
+
+### Fundamentos do TypeScript
+
+E um super sete, sendo um conjunto de funcionalidades que adicionamos em cima de uma linguagem.
+
+Exemplo:
+
+Imagine que você tem uma função que vai retorna uma mensagem de boas vindas ao usuario:
+Onde o nome dela e: `showWelcomeMessage`.
+E ela recebe um parametro: `(user)`. que teria os dados do usuario.
+E retornaria uma mensagem: `return`.
+Com o texto: ` `Welcome ${user.name}, your e-mail is ${user.email}`; `
+
+```
+function showWelcomeMessage(user) {
+    return `Welcome ${user.name}, your e-mail is ${user.email}`;
+}
+```
+
+e para evitar error adicionamos uma tipagem, como qual o formato que estamos esperando dentro da minha função:
+
+Exemplo:
+Definir um tipo para o usuario, e sempre definimos com a primeira letra maiuscula. e definindo o tipo de objeto com `type`.
+E se quiser dizer que o estado não e obrigatorio eu uso `?` do lado de state `state?`.
+E vou falar para meu `(user)` da função precisa segui o formato do User do `type` ficando assim `(user: User)`.
+
+```
+type User = {
+    name: string
+    email: string
+    address: {
+        city: string
+        state?: string
+    }
+}
+
+function showWelcomeMessage(user: User) {
+    return `Welcome ${user.name}, your e-mail is ${user.email}, your city is ${user.address.city}, and your state is ${user.address.state}`;
+}
+```
+
+Mais não precisamos tipar todas as variaves da aplicação, pois o typescript tem inferencia de tipos conseguindo indentifica qual a variavel na maioria dos casos.
+
