@@ -672,7 +672,7 @@ function showWelcomeMessage(user) {
 }
 ```
 
-e para evitar error adicionamos uma tipagem, como qual o formato que estamos esperando dentro da minha função:
+E para evitar error adicionamos uma tipagem, como qual o formato que estamos esperando dentro da minha função:
 
 Exemplo:
 Definir um tipo para o usuario, e sempre definimos com a primeira letra maiuscula. e definindo o tipo de objeto com `type`.
@@ -696,3 +696,59 @@ function showWelcomeMessage(user: User) {
 
 Mais não precisamos tipar todas as variaves da aplicação, pois o typescript tem inferencia de tipos conseguindo indentifica qual a variavel na maioria dos casos.
 
+### TypeScript no ReactJS
+
+Configura o typescript para ser usado na aplicação.
+tem a finalidade de tipar as propriedade que um componete pode ter.
+
+Vamos instalar TypeScript n aplicação como dependencia de desenvolvimento:
+
+```yarn add typescript -D```
+
+Logo apos instalado vamois rodar um comando:
+
+```yarn tsc --init```
+
+Que ira inicia o typescript na aplicação.
+
+Agora vamos configura o arquivo criado `tsconfig.json`
+Vamos descomentar o `"lib":[],`
+E adicionar nele tres biblioteca.
+
+```
+"lib": ["dom", "dom.iterable", "esnext"],
+```
+
+Vamos selecionar todas `/*` com `Ctrl + Shit + L` ele ira selecionar todos.
+
+Ai podemos ir ate final da linha e deletar.
+
+Vamos descomentar o `"allowJs": true,`
+
+Vamos descomentar o `"allowSyntheticDefaultImports": true,`
+
+Vamos descomentar o `"skipLibCheck": true `
+
+Vamos descomentar o `"esModuleInterop": true,`
+
+Vamos descomentar o `"strict": true, `
+
+Vamos descomentar o `"forceConsistentCasingInFileNames": true,`
+
+Vamos descomentar o `"moduleResolution": "node",`
+
+Vamos descomentar o `"resolveJsonModule": true,`
+
+Vamos descomentar o `"isolatedModules": true,`
+
+Vamos descomentar o `"noEmit": true,`
+
+Vamos descomentar o `"jsx": "preserve",` e troca o nome `"jsx": "react-jsx",`
+
+Agora podemos remove o restante e a função `"target": "es2016",` , `"module": "commonjs", ` que elas não serão usadas.
+
+Fica assim:
+
+<h1 align="center">
+    <img src="./img/img041.png" />
+</h1>
