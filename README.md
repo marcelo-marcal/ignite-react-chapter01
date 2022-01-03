@@ -830,3 +830,17 @@ e adicionar dentro de useState o nome da interfaces `Repository[]`, ficando assi
 <h1 align="center">
     <img src="./img/img046.png" />
 </h1>
+
+## 5 Finalizando Aplicação:
+
+### Utilizando React DevTools
+
+Vamos ate as Extensões do Browser e procura por React DevTools.
+Essa extençao vai me ajudar no DevTools:
+
+`Components` ver a arvore react.
+
+`Profiler` anotar todos o componetes exibidos em tela, quanto tempo demora para exibir.
+
+
+
