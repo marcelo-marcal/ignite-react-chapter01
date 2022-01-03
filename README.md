@@ -752,3 +752,42 @@ Fica assim:
 <h1 align="center">
     <img src="./img/img041.png" />
 </h1>
+
+Agora vamos continuar a configuração dontro do `webpack.config.js` porque o `'babel-loader'` não consegui interpleta codigo typescript.
+E para o `'babel-loader'` entenda codigos typescript, vamos adiciona mais uma configuração:
+
+Vamos instalar o @babel/preset-typescript como dependencia de desenvolvimento:
+
+```yarn add @babel/preset-typescript -D```
+
+Agora vamos no arquivo `babel.config.js` e adiciona `'@babel/preset-typescript',`
+
+<h1 align="center">
+    <img src="./img/img042.png" />
+</h1>
+
+E dentro do `webpack.config.js` vamos mudar para que seja compreendido tanto o `javascript` quanto `typescript` e em `test: /\. tsx$/,` vamos fazer a seguinte alteração: `test: /\. (j | t)sx$/,` dentro de uma expresão regular onde essa `|` que dizer ou.
+
+E no `resolve` precisamos acrescentar o `'.ts', '.tsx'` dentro do `extensions: ['.js', '.jsx', '.ts', '.tsx'],`. 
+
+E mudar o `entry:` mudando ele para `'index.tsx'`.
+
+<h1 align="center">
+    <img src="./img/img043.png" />
+</h1>
+
+E agora mudar o arquivo `index.jsx` para `index.tsx`.
+
+Essa mudança vai gera um error, porque quando instalamos o typescript em nossa aplicação por não incluir umas definições de tipo do typescript, ou seja ela não inclui toda a parte do typescript precisa para entender como a blioteca funciona.
+
+Vamos instalar o @types/react-dom como dependencia de desenvolvimento:
+
+```yarn add @types/react-dom -D```
+
+```yarn add @types/react -D```
+
+E vamos execulta a aplicação pra ver se tudo esta funcionando:
+
+`yarn dev`
+
+
