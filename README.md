@@ -840,7 +840,6 @@ Essa extençao vai me ajudar no DevTools:
 
 `Components` ver a arvore react.
 
-`Profiler` anotar todos o componetes exibidos em tela, quanto tempo demora para exibir.
+`Profiler` anotar todos os componetes exibidos em tela, quanto tempo demora para exibir.
 
-
-
+### Finalização do módulo
