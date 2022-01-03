@@ -790,4 +790,43 @@ E vamos execulta a aplicação pra ver se tudo esta funcionando:
 
 `yarn dev`
 
+### Componentes com TypeScript
 
+Configura os componetes que estão em jsx para tsx.
+
+Vamos começa com `App.jsx` porque e so tranforma em `tsx`, assim: `App.tsx`.
+
+Agora vamos para o `RepositoryItem.jsx`, `tsx` assim: `RepositoryItem.tsx`.
+
+E ja apresentou um erro, mostrando que o `props` recebe um any, `any` segnifica qualquer tipo, e que dizer que ele não sabe o tipo de desse `props`.
+
+<h1 align="center">
+    <img src="./img/img044.png" />
+</h1>
+
+Vamos começas fazendo uma `interface` com o nome do componete `RepositoryItemProps` com o Props no final.
+
+E vou receber dentro do props: 
+```
+repository: {
+    name: string;
+    description: string;
+    html_url: string;
+  }
+```
+
+E vamos copiar o `RepositoryItemProps` e colocar no `props`.
+Como `(props: RepositoryItemProps)`, falando que o formato do props e o fomato que esta dentro do `RepositoryItemProps`.
+
+<h1 align="center">
+    <img src="./img/img045.png" />
+</h1>
+
+E dentro do `RepositoryList.jsx`, vamos começa alterando para `tsx` ficando `RepositoryList.tsx`.
+
+Vamos fazendo uma `interface` com o nome do componete `Repository`.
+e adicionar dentro de useState o nome da interfaces `Repository[]`, ficando assim: `useState<Repository[]>([])`.
+
+<h1 align="center">
+    <img src="./img/img046.png" />
+</h1>
